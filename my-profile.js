@@ -7,24 +7,29 @@ window.onload = () => {
 
     const ul = document.createElement('ul')
     ul.setAttribute('id', 'details')
-    
-    const li1 = document.createElement('li')
-    li1.innerHTML = `<li> Age: 21 </li>`
-    const li2 = document.createElement('li')
-    li2.innerHTML = `<li> Height: 177cm </li>`
-    const li3 = document.createElement('li')
-    li3.innerHTML = `<li> Sport: Football </li>`
-    const li4 = document.createElement('li')
-    li4.innerHTML = `<li> Degree: Computer Science </li>`
 
-    
+    const deets = ['Age: 21', 'Height: 177cm', 'Sport: Football', 'Degree: Computer Science']
+    deets.forEach(string => {
+        const li = document.createElement('li')
+        li.textContent = string; 
+        //li.innerHTML = string; 
+        ul.appendChild(li)
+    })
 
-    ul.appendChild(li1)
-    ul.appendChild(li2)
-    ul.appendChild(li3)
-    ul.appendChild(li4)
+    document.body.appendChild(ul)
+     
 
-     document.body.appendChild(ul)
 
+}
+
+function addElement(element, id, textContent) {
+    if (typeof element != 'string') {
+        throw new TypeError('Requires a HTML Element Name')
+    }
+    const el = document.createElement(element)
+    el.setAttribute('id', id)
+    el.textContent = textContent
+
+    document.body.appendChild(el)
 
 }
