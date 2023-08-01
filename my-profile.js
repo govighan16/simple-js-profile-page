@@ -2,15 +2,18 @@ window.onload = () => {
     console.log("This is my profile page!");
     const h1 = document.createElement('h1')
     h1.setAttribute('id', 'name')
+    h1.setAttribute('class', 'name')
     h1.innerText = 'Govi'
     document.body.appendChild(h1)
 
     const ul = document.createElement('ul')
     ul.setAttribute('id', 'details')
+    ul.setAttribute('class', 'my-details')
 
     const deets = ['Age: 21', 'Height: 177cm', 'Sport: Football', 'Degree: Computer Science']
     deets.forEach(string => {
         const li = document.createElement('li')
+        li.setAttribute('class', 'detail')
         li.textContent = string; 
         //li.innerHTML = string; 
         ul.appendChild(li)
