@@ -6,6 +6,16 @@ window.onload = () => {
     h1.innerText = 'Govi'
     document.body.appendChild(h1)
 
+
+    const pic = document.createElement('img')
+    pic.setAttribute('src', 'https://pbs.twimg.com/media/FzUgybcXsAEyoro.jpg')
+    const picDiv = document.createElement('div')
+    picDiv.setAttribute('class', 'pic-container')
+    picDiv.appendChild(pic)
+
+    document.body.appendChild(picDiv)
+    
+
     const ul = document.createElement('ul')
     ul.setAttribute('id', 'details')
     ul.setAttribute('class', 'my-details')
