@@ -20,8 +20,14 @@ window.onload = () => {
     })
 
     document.body.appendChild(ul)
-     
 
+    const div = document.createElement('div')
+    div.setAttribute('id', 'time')
+    
+    setInterval(() => {
+        div.textContent = getTime();
+      }, 1000);
+    document.body.appendChild(div)
 
 }
 
@@ -35,4 +41,12 @@ function addElement(element, id, textContent) {
 
     document.body.appendChild(el)
 
+}
+
+function getTime() {
+    const time = new Date()
+    const hours = time.getHours().toString().padStart(2, '0');
+    const minutes = time.getMinutes().toString().padStart(2, '0');
+    const seconds = time.getSeconds().toString().padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
 }

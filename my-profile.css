@@ -35,4 +35,10 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+
+  #time {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+  }
   
